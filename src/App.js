@@ -1,12 +1,12 @@
 import './App.css'
 import React from 'react'
-import Game from './components/Game.jsx'
+import GameLogic from './components/GameLogic'
 
 const App = () => {
 	return (
 		<div>
 			<header className='App-header'>
-				<Game />
+				<GameLogic />
 			</header>
 		</div>
 	)

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './Game.module.css'
 const GameLayout = ({ board, renderStatus, renderCell, winner, onRestart }) => {
 	return (
@@ -21,5 +22,11 @@ const GameLayout = ({ board, renderStatus, renderCell, winner, onRestart }) => {
 		</div>
 	)
 }
-
+GameLayout.propTypes = {
+	board: PropTypes.arrayOf(PropTypes.string).isRequired,
+	renderStatus: PropTypes.func.isRequired,
+	winner: PropTypes.string,
+	onRestart: PropTypes.func.isRequired,
+	renderCell: PropTypes.func.isRequired,
+}
 export default GameLayout
